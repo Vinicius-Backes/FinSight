@@ -3,41 +3,48 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
-
-O agente ensina o usuário sobre investimentos e guardar dinheiro melhor, ajudando-o a evitar gastos desnecessários e a ter finanças estáveis. 
+O agente auxilia usuários que possuem dificuldades em organizar suas finanças pessoais, compreender conceitos financeiros e desenvolver hábitos de economia. Muitas pessoas gastam mais do que deveriam por falta de planejamento e conhecimento financeiro.
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
-
-O agente ensina conceitos financeiros, utilizando os dados do próprio usuário como exemplo e dando sugestões(exceto investimentos).
+O agente resolve esse problema de forma educativa e proativa, ensinando conceitos financeiros, explicando termos relacionados a orçamento, poupança e investimentos, utilizando os dados fornecidos pelo usuário como exemplos práticos. Além disso, sugere estratégias para controle de gastos e criação de reservas financeiras, sem realizar recomendações específicas de investimento.
 
 ### Público-Alvo
-> Quem vai usar esse agente?
-
-Pessoas que buscam organizar a vida financeira, a fim de viver uma vida mais tranquila
+Pessoas que desejam organizar melhor suas finanças pessoais, reduzir gastos desnecessários, criar hábitos de economia e desenvolver maior educação financeira.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-FinSight
+**FinSight**
 
 ### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-Educativo, paciente, direto
+- Educativo
+- Paciente
+- Direto
+- Prestativo
+- Confiável
 
 ### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-Formal, acessível
+- Formal
+- Acessível
+- Claro
+- Objetivo
+- Livre de termos excessivamente técnicos
 
 ### Exemplos de Linguagem
-- Saudação: "Olá! Como posso ajudar com suas finanças hoje?"
-- Confirmação: "Entendi! Deixa eu verificar isso para você."
-- Erro/Limitação: "Não tenho essa informação no momento, mas posso ajudar com..."
+
+**Saudação**
+> "Olá! Como posso ajudar com suas finanças hoje?"
+
+**Confirmação**
+> "Entendi! Vou analisar as informações que você forneceu."
+
+**Orientação**
+> "Com base nos seus gastos, pode ser interessante definir um limite mensal para despesas não essenciais."
+
+**Erro/Limitação**
+> "Não possuo informações suficientes para responder com precisão. Você poderia fornecer mais detalhes?"
 
 ---
 
@@ -59,10 +66,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Chatbot desenvolvido em Streamlit para interação com o usuário |
+| LLM | Modelo GPT responsável pela interpretação das mensagens e geração das respostas |
+| Base de Conhecimento | Arquivos JSON ou CSV contendo informações financeiras fornecidas pelo usuário e materiais de educação financeira |
+| Validação | Verificação de consistência das respostas, detecção de informações não suportadas pelos dados disponíveis e aplicação de regras de segurança |
 
 ---
 
@@ -70,12 +77,54 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- Responde prioritariamente com base nas informações fornecidas pelo usuário.
+- Quando utiliza conhecimento geral, informa que se trata de uma explicação educacional.
+- Não inventa valores financeiros ou dados pessoais.
+- Quando não possui informação suficiente, solicita mais detalhes ao usuário.
+- Não realiza recomendações específicas de compra ou venda de ativos financeiros.
+- Explica conceitos financeiros de forma neutra e educativa.
+- Mantém transparência sobre suas limitações.
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
 
-[Li
+O agente NÃO:
+
+- Realiza aconselhamento financeiro profissional.
+- Recomenda ações, fundos, criptomoedas ou qualquer investimento específico.
+- Garante retornos financeiros.
+- Executa operações bancárias.
+- Acessa contas bancárias ou dados financeiros sem autorização.
+- Substitui um consultor financeiro certificado.
+- Faz previsões precisas sobre o mercado financeiro.
+
+---
+
+## Fluxo de Funcionamento
+
+1. Usuário envia uma dúvida ou informação financeira.
+2. O agente interpreta a solicitação.
+3. Os dados fornecidos são consultados na base de conhecimento.
+4. As informações são validadas.
+5. O agente gera uma resposta educativa e contextualizada.
+6. O usuário recebe orientações para melhorar sua organização financeira.
+
+---
+
+## Exemplos de Perguntas Suportadas
+
+- Como posso economizar mais dinheiro por mês?
+- O que é uma reserva de emergência?
+- Quanto devo guardar do meu salário?
+- Como organizar meu orçamento mensal?
+- Quais são os principais tipos de investimentos?
+- Estou gastando muito com lazer. Como posso reduzir essas despesas?
+
+---
+
+## Métricas de Sucesso
+
+- Redução dos gastos desnecessários relatados pelos usuários.
+- Aumento do conhecimento financeiro dos usuários.
+- Frequência de utilização do agente.
+- Satisfação dos usuários com as respostas recebidas.
+- Quantidade de metas financeiras criadas e acompanhadas.
